@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#F5F7F8">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Loading Model..."
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#45474B"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"/>
+
+    <RelativeLayout
+        android:layout_width="288dp"
+        android:layout_height="384dp"
+        android:id="@+id/cameraLyt"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_close"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/predict"
+        android:text="Predict"
+        android:layout_below="@+id/cameraLyt"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp">
+
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_weight="0.5"
+            android:text="From Camera"
+            android:textColor="#F5F7F8"
+            android:layout_marginRight="2dp"
+            android:backgroundTint="#495E57"
+            />
+
+        <Button
+            android:id="@+id/btnLib"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="From Library"
+            android:textColor="#F5F7F8"
+            android:layout_marginLeft="2dp"
+            android:backgroundTint="#495E57"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
