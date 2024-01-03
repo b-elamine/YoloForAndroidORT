@@ -12,33 +12,20 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.lifecycle.LifecycleOwner;
-
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.ImageDecoder;
-import android.graphics.Matrix;
-import android.media.ExifInterface;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.Rational;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.google.common.util.concurrent.ListenableFuture;
-
-import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 import android.Manifest;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         cancel = findViewById(R.id.btnCancel);
         previewView = findViewById(R.id.previewView);
         predictBtn =  findViewById(R.id.predict);
-
 
         if (!hasCameraPermission()) {
             requestCameraPermission();
@@ -134,8 +120,6 @@ public class MainActivity extends AppCompatActivity {
         }, ContextCompat.getMainExecutor(this));
     }
 
-
-
     private boolean hasCameraPermission() {
         return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_GRANTED;
@@ -191,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         image.close();
     }
 }

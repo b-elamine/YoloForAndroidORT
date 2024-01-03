@@ -27,7 +27,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-val camerax_version = "1.1.0-alpha10"
+val cameraxVersion = "1.1.0-alpha10"
 
 
 dependencies {
@@ -41,11 +41,11 @@ dependencies {
     implementation("com.microsoft.onnxruntime:onnxruntime-android:1.16.0-rc1")
     // CameraX core library
     // CameraX core library
-    implementation("androidx.camera:camera-core:$camerax_version")
+    implementation("androidx.camera:camera-core:$cameraxVersion")
     // CameraX camera2 implementation
-    implementation("androidx.camera:camera-camera2:$camerax_version")
+    implementation("androidx.camera:camera-camera2:$cameraxVersion")
     // CameraX lifecycle library
-    implementation("androidx.camera:camera-lifecycle:$camerax_version")
+    implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
     // CameraX view binding library
     implementation("androidx.camera:camera-view:1.0.0-alpha30")
 }
